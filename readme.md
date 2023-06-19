@@ -2,11 +2,17 @@
 
 A web application that provides real-time weather data using the OpenWeatherMap API. Including features such hourly and daily forecasts, current temperature, 'feels like' temperature, humidity levels, wind speed, and displays information about the time and location of the search.
 
-![Screenshot of the app](./path-to-your-screenshot.png)
+<br />
+
+<div align="center">
+  <img src="./src/assets/weather-icon.png" width="400">
+</div>
+
+<br />
 
 ## Deployed Site
 
-
+<br />
 
 ## Tech Stack
 
@@ -14,12 +20,16 @@ A web application that provides real-time weather data using the OpenWeatherMap 
 - React
 - Tailwind
 
+<br />
+
 ## Built With
 - Luxon
 - Toastify
 - Vite
 - OpenWeatherMap API
 - Icons: https://iconscout.com/
+
+<br />
 
 ## How to Use
 
