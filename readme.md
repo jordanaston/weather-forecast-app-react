@@ -5,12 +5,15 @@ A web application that provides real-time weather data using the OpenWeatherMap 
 <br />
 
 <div align="center">
-  <img src="./src/assets/weather-icon.png" width="400">
+  <img src="./src/assets/weather-app-cold.png" width="400">
+  <img src="./src/assets/weather-app-warm.png" width="400">
 </div>
 
 <br />
 
-## Deployed Site
+## Deployed With Netlify
+
+[Visit the site here!](https://darling-sable-723a82.netlify.app/)
 
 <br />
 
