@@ -15,8 +15,8 @@ function App() {
       <TimeAndLocation />
       <TemperatueAndDetails />
 
-      <Forecast title="Hourly Forescast"/>
-      <Forecast title="Daily Forescast"/>
+      <Forecast title="Hourly Forescast" />
+      <Forecast title="Daily Forescast" />
     </div>
   );
 }
