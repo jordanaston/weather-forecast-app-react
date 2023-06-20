@@ -13,7 +13,7 @@ A web application that provides real-time weather data using the OpenWeatherMap 
 
 ## Deployed With Netlify
 
-[Visit the site here!](https://darling-sable-723a82.netlify.app/)
+[Visit the site here!](https://darlingsable.netlify.app/)
 
 <br />
 
