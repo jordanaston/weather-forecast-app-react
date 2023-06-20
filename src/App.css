@@ -1,0 +1,15 @@
+.gradient-pastel-blue {
+    background-image: linear-gradient(to right, #B2EBF2, #E0F7FA);
+  }
+  
+  .gradient-pastel-orange {
+    background-image: linear-gradient(to right, #FFCC80, #FFE0B2);
+  }
+  
+  .app {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
