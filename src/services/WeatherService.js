@@ -1,9 +1,11 @@
 import { DateTime } from "luxon";
 
 const BASE_URL = "https://api.openweathermap.org/data/2.5";
+const ONECALL_BASE_URL = "https://api.openweathermap.org/data/3.0";
 
-const getWeatherData = (infoType, searchParams) => {
-  const url = new URL(BASE_URL + "/" + infoType);
+const getWeatherData = (infoType, searchParams, useOneCall = false) => {
+  const baseUrl = useOneCall ? ONECALL_BASE_URL : BASE_URL;
+  const url = new URL(baseUrl + "/" + infoType);
   url.search = new URLSearchParams({
     ...searchParams,
     appid: import.meta.env.VITE_APP_API_KEY,
@@ -73,12 +75,16 @@ const getFormattedWeatherData = async (searchParams) => {
 
   const { lat, lon } = formattedCurrentWeather;
 
-  const formattedForecastWeather = await getWeatherData("onecall", {
-    lat,
-    lon,
-    exclude: "current,minutely,alerts",
-    units: searchParams.units,
-  }).then(formatForecastWeather);
+  const formattedForecastWeather = await getWeatherData(
+    "onecall",
+    {
+      lat,
+      lon,
+      exclude: "current,minutely,alerts",
+      units: searchParams.units,
+    },
+    true
+  ).then(formatForecastWeather);
 
   return { ...formattedCurrentWeather, ...formattedForecastWeather };
 };
@@ -90,7 +96,7 @@ const formatToLocalTime = (
 ) => DateTime.fromSeconds(secs).setZone(zone).toFormat(format);
 
 const iconUrlFromCode = (code) =>
-  `http://openweathermap.org/img/wn/${code}@2x.png`;
+  `https://openweathermap.org/img/wn/${code}@2x.png`;
 
 export default getFormattedWeatherData;
 
